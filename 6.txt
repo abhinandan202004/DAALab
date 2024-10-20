@@ -1,0 +1,86 @@
+
+import java.util.Random;
+import java.util.Scanner;
+
+class HeapSort {
+
+    /* Function to heapify a subtree. Here 'i' is the index of root node in array a[], and 'n' is the size of heap. */
+    static void heapify(int a[], int n, int i) {
+        int largest = i; // Initialize largest as root
+        int left = 2 * i + 1; // left child
+        int right = 2 * i + 2; // right child
+
+        // If left child is larger than root
+        if (left < n && a[left] > a[largest]) {
+            largest = left;
+        }
+
+        // If right child is larger than root
+        if (right < n && a[right] > a[largest]) {
+            largest = right;
+        }
+
+        // If root is not largest
+        if (largest != i) {
+            // swap a[i] with a[largest]
+            int temp = a[i];
+            a[i] = a[largest];
+            a[largest] = temp;
+
+            // Recursively heapify the affected subtree
+            heapify(a, n, largest);
+        }
+    }
+
+    /* Function to implement the heap sort */
+    static void heapSort(int a[], int n) {
+        // Build heap (rearrange array)
+        for (int i = n / 2 - 1; i >= 0; i--) {
+            heapify(a, n, i);
+        }
+
+        // One by one extract an element from heap
+        for (int i = n - 1; i >= 0; i--) {
+            // Move current root element to end
+            int temp = a[0];
+            a[0] = a[i];
+            a[i] = temp;
+
+            // call max heapify on the reduced heap
+            heapify(a, i, 0);
+        }
+    }
+
+    static void printArr(int a[], int n) {
+        for (int i = 0; i < n; ++i) {
+            System.out.print(a[i] + " ");
+        }
+    }
+
+    public static void main(String args[]) {
+        Scanner a = new Scanner(System.in);
+        Random rand = new Random();
+        System.out.println("Enter value of n:");
+        int n = a.nextInt();
+        int[] arr = new int[n];
+
+        // Fill the array with random values
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = rand.nextInt(100); // Random values between 0 and 99
+        }
+
+        long start = System.nanoTime(); // Start time
+        heapSort(arr, n); // Call heap sort
+        long end = System.nanoTime(); // End time
+        long exe = end - start; // Execution time
+
+        System.out.println("Execution time = " + exe + " ns");
+        System.out.println("Sorted array:");
+
+        for (int num : arr) {
+            System.out.println(num);
+        }
+
+        a.close(); // Close the scanner
+    }
+}
