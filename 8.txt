@@ -26,3 +26,6 @@ class Knapsack {
         System.out.println("KnapSack value is " + knapSack(W, weight, profit, n));
     }
 }
+
+Output
+Knapsack value is 13332

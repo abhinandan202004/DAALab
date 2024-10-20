@@ -92,3 +92,16 @@ public class Dijkstra {
         sc.close();
     }
 }
+
+Output
+Enter the number of vertices:
+3
+Enter the weighted adjacency matrix (use 0 for no edge):
+1 4 7
+7 8 9
+4 5 6
+Enter the source vertex (0 to 2):
+2
+The shortest paths from source 2 to remaining vertices are:
+Shortest path from 2 to 0: 2 -> 0 = 4
+Shortest path from 2 to 1: 2 -> 1 = 5

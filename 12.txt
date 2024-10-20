@@ -41,3 +41,6 @@ public class TSE {
         System.out.println("The cost of the most efficient tour = " + ans);
     }
 }
+
+Output:
+The cost of the most efficient tour = 80

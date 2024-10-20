@@ -79,3 +79,11 @@ public class SubsetSumDP {
     }
 }
 
+
+Output
+Enter the number of elements: 5
+Enter the elements:
+88 74 65 89 41
+Enter the target sum: 5
+Subset sum exists: false
+Time complexity: 0.0187 milliseconds

@@ -55,3 +55,16 @@ public class prims {
         }sc.close();
     }
 }
+
+Output
+Enter the number of vertices
+3
+Enter the weighted graph
+1 5 8
+9 7 1
+5 6 1
+Enter the source vertex
+1
+1->2=5
+2->3=1
+The cost of minimum spanning tree is6

@@ -59,3 +59,49 @@ arr[k++]=right[j++];
 }
 }
 }
+
+
+OUTPUTS
+enter value of n:
+5
+execution time=7600 ns
+sorted array:
+50
+53
+67
+73
+81
+enter value of n:
+10
+execution time=18300 ns
+sorted array:
+27
+40
+45
+52
+57
+59
+68
+71
+95
+99
+enter value of n:
+15
+execution time=22700 ns
+sorted array:
+10
+15
+26
+27
+32
+37
+10
+41
+57
+74
+82
+83
+84
+93
+95
+97

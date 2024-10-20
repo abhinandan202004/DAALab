@@ -52,3 +52,8 @@ class Graph {
         graph.printReachableNodes(startNode);
     }
 }
+
+Output
+
+Nodes which are reachable are
+0 1 2 4 5

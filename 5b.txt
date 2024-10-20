@@ -42,3 +42,15 @@ public class WarshallsAlgorithm {
         scanner.close();
     }
 }
+
+Enter the number of vertices: 4
+Enter the adjacency matrix (0 for no edge, 1 for edge):
+0 1 0 1
+0 1 0 1
+1 0 1 1
+1 1 1 1
+Transitive Closure:
+1 1 1 1
+1 1 1 1
+1 1 1 1
+1 1 1 1
